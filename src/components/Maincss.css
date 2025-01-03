@@ -220,11 +220,6 @@ margin: 10px;
   color: #e14d2a; /* Red color for highlighted words */
 }
 
-@media (max-width: 768px) {
-  .service-card {
-    margin-bottom: 20px;
-  }
-}
 .swiper-button-next:after,
 .swiper-button-prev:after {
   color: black; /* Change to any color you prefer */
@@ -233,4 +228,88 @@ margin: 10px;
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   color: black; /* Optional: Add a hover effect */
+}
+
+/* Phasees */
+/* GridLayout.css */
+.grid-container-sm-left {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.left-panel {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+.vertical-line{
+  height: 100%;
+  border-left: 2px dotted #bc1823;
+  position: absolute;
+  z-index: -1;
+  
+}
+
+.right-panel {
+  text-align: left;
+  padding: 20px;
+}
+
+.title{
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.subtitle{
+  font-size: 18px;
+}
+.description{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* Drivng Value */
+.grid-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+}
+.flexible-flex{
+  display: flex;
+  gap: 10px;
+}
+.flexible-text-card{
+  display: flex;
+  flex-direction: column; 
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    margin-bottom: 20px;
+  }
+
+  .vertical-line{
+    display: none;
+    
+  }
+  .grid-container-sm-left{
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .flexible-flex{
+    flex-direction: column;
+    align-items: center;
+  }
+  .flexible-text-card{
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+  }
 }

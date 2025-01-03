@@ -12,6 +12,9 @@ import ScreenComponent from './components/ScreenComponent';
 import IndustrySection from './components/IndustrySection';
 import ServiceCard from './components/ServiceCard';
 import AdvisoryCarousel from './components/AdvsoryCarousel';
+import Slider from './components/industry/slider'
+import Phases from './components/industry/phases';
+import DrivingValue from './components/industry/DrivngValue';
 import data from '../src/components/data.json'
 
 
@@ -28,6 +31,9 @@ function App() {
    <IndustrySection/>
    <ServiceCard/>
    <AdvisoryCarousel/>
+   <Slider/>
+   <Phases/>
+   <DrivingValue/>
     </div>
   );
 }
