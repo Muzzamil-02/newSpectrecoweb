@@ -14,6 +14,7 @@ import ServiceCard from './components/ServiceCard';
 import AdvisoryCarousel from './components/AdvsoryCarousel';
 import Slider from './components/industry/slider'
 import Phases from './components/industry/phases';
+import TickerComponent from './components/industry/ticker';
 import DrivingValue from './components/industry/DrivngValue';
 import data from '../src/components/data.json'
 import GlobalPresence from './components/GlobalPresence';
@@ -42,7 +43,7 @@ function App() {
    <GlobalPresence/>
    <NewsInsights/>
    <TeamSection/>
-   
+   <TickerComponent />
     </div>
   );
 }
