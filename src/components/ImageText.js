@@ -11,17 +11,20 @@ const ImageText = ({ imagePosition , isContainer ,componentText }) => {
 
   const content = (
     <Row className="align-items-center">
-      <Col md={6} className={`text ${textOrder}`}>
+      <Col md={7} className={`text ${textOrder}`}>
       <p style={{fontSize:"22px",fontWeight:"300",color:"#d30c0b"}}>{componentText.mainHeading}</p>
         <p style={{fontSize:"40px",fontWeight:"400",color:"#000"}}>{componentText.Heading}</p>
         <p style={{fontSize:"1rem",color:"#000"}}>
         {componentText.Text}
         </p>
-        <Button variant="danger" style={{ display: 'flex', justifyContent: 'left', fontSize:"20px",fontWeight:"300",borderRadius:"0px 0px 0px 0px",padding:"15px 50px 15px 50px" }}>
-        {componentText.buttonText}
-        </Button>
+        <div className="text-center mt-4">
+              <Button variant="danger" style={{ borderRadius: "5px" }}>
+              {componentText.buttonText}
+              </Button>
+            </div>
       </Col>
-      <Col md={6} className={`image ${imageOrder}`}>
+     
+      <Col md={5} className={`image ${imageOrder}`}>
         <img src={componentText.imageSrc} alt="ESG Dashboard" className="img-fluid" />
       </Col>
     </Row>

@@ -16,7 +16,7 @@ const CenterText = ({ isContainer }) => {
               resource allocation for maximum ROI. Partner with Spectreco to confidently achieve your Net Zero targets while safeguarding profitability and enhancing
               long-term value creation in today’s complex regulatory landscape.
             </p>
-            <img src="./images/hero-2.png" alt="ESG Dashboard"  />
+            <img src="./images/hero-2.png" alt="ESG Dashboard"  style={{width:"100%"}}/>
           </Col>
         </Row>
       );

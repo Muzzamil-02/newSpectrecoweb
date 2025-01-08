@@ -313,3 +313,11 @@ margin: 10px;
     text-align: center;
   }
 }
+.textalign-left{
+  text-align: left;
+}
+.padingtopbottom
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

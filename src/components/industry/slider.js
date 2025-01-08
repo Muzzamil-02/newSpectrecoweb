@@ -49,6 +49,12 @@ const Slider = () => {
         navigation={true}
         modules={[Navigation]}
         slidesPerView={4} // Adjust for responsiveness
+        breakpoints={{
+          320: { slidesPerView: 1, spaceBetween: 20 }, // For small screens
+          640: { slidesPerView: 2, spaceBetween: 20 }, // For tablets
+          1024: { slidesPerView: 3, spaceBetween: 30 }, // For laptops
+          1440: { slidesPerView: 4, spaceBetween: 40 }, // For larger screens
+        }}
         style={{
             paddingLeft: "50px"
           }}

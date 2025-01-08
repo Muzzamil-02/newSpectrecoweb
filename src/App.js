@@ -16,6 +16,10 @@ import Slider from './components/industry/slider'
 import Phases from './components/industry/phases';
 import DrivingValue from './components/industry/DrivngValue';
 import data from '../src/components/data.json'
+import GlobalPresence from './components/GlobalPresence';
+import StartConversation from './components/StartConversation';
+import NewsInsights from './components/NewsInsights';
+import TeamSection from './components/TeamSection';
 
 
 
@@ -23,7 +27,7 @@ function App() {
   const imagetext = data.ImageTextComponent;
   return (
     <div className="App">
-    <ImageText imagePosition="left" isContainer={true} componentText={imagetext}/>
+    <ImageText imagePosition="right" isContainer={true} componentText={imagetext}/>
     <CenterText isContainer={true}/>
     <CardSection/>
     <SustainableReporting/>
@@ -34,6 +38,11 @@ function App() {
    <Slider/>
    <Phases/>
    <DrivingValue/>
+   <StartConversation />
+   <GlobalPresence/>
+   <NewsInsights/>
+   <TeamSection/>
+   
     </div>
   );
 }

@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import "./Maincss.css"
+import "./Maincss.css";
+
 const cardsData = [
   {
     title: "Community Impact",
@@ -21,55 +22,57 @@ const cardsData = [
     icon: "🌿",
   },
   {
-    title: "Carbon Cleanse",
-    description: "Measure, Track, Report & Benchmark Scope 1, 2 & 3 emissions.",
-    icon: "🌿",
-  },
-  {
     title: "Energy Efficiency",
     description: "Improve energy efficiency across operations and reduce costs.",
     icon: "💡",
-  },
-  {
-    title: "Carbon Cleanse",
-    description: "Measure, Track, Report & Benchmark Scope 1, 2 & 3 emissions.",
-    icon: "🌿",
   },
   {
     title: "Innovation Support",
     description: "Drive innovative solutions for sustainable business growth.",
     icon: "🚀",
   },
-  {
-    title: "Carbon Cleanse",
-    description: "Measure, Track, Report & Benchmark Scope 1, 2 & 3 emissions.",
-    icon: "🌿",
-  },
 ];
 
 const AdvisoryCarousel = () => {
   return (
-    <div style={{ padding: "20px", backgroundColor: "#f9f9f9",marginTop:"40px",marginBottom:"40px" }}>
-      <h2 style={{padding:"20px"}}>Tailored Industry Solutions</h2>
+    <div
+      style={{
+        padding: "20px",
+        backgroundColor: "#f9f9f9",
+        marginTop: "40px",
+        marginBottom: "40px",
+      }}
+    >
+      <h2 style={{ padding: "20px" }}>Tailored Industry Solutions</h2>
       <Swiper
         navigation={true}
         modules={[Navigation]}
-        spaceBetween={20}
-        slidesPerView={4} // Adjust for responsiveness
+        slidesPerView={4}
+        breakpoints={{
+          320: { slidesPerView: 1, spaceBetween: 20 }, // For small screens
+          640: { slidesPerView: 2, spaceBetween: 20 }, // For tablets
+          1024: { slidesPerView: 3, spaceBetween: 30 }, // For laptops
+          1440: { slidesPerView: 4, spaceBetween: 40 }, // For larger screens
+        }}
+        style={{
+          paddingLeft: "50px",
+        }}
       >
         {cardsData.map((card, index) => (
           <SwiperSlide key={index}>
             <div
               style={{
+                minHeight: "250px",
                 backgroundColor: "#fff",
-                padding: "20px",
+                padding: "25px 15px",
                 borderRadius: "8px",
                 boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-                textAlign: "center",
+                textAlign: "left",
+                marginRight: `45px`,
               }}
             >
               <div style={{ fontSize: "30px" }}>{card.icon}</div>
-              <h3 style={{ margin: "10px 0" ,fontSize:"20px" }}>{card.title}</h3>
+              <h3 style={{ margin: "10px 0", fontSize: "20px" }}>{card.title}</h3>
               <p style={{ fontSize: "14px", color: "#555" }}>{card.description}</p>
             </div>
           </SwiperSlide>
