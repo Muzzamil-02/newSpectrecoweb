@@ -93,8 +93,6 @@ const Slider = () => {
       </button>
     </div>
       );
-
-
 }
 
 export default Slider;

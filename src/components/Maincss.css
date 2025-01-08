@@ -234,7 +234,7 @@ margin: 10px;
 /* GridLayout.css */
 .grid-container-sm-left {
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 40% 60%;
 }
 
 .left-panel {

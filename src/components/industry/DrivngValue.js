@@ -55,11 +55,8 @@ const DrivingValue = () => {
                         </p>
                     </div>
                 </div>
-
-               
-
         ))}
-                    </div>
+        </div>
 
       <button
         style={{
