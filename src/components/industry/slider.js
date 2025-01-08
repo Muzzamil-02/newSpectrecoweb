@@ -46,32 +46,45 @@ const Slider = () => {
         <div style={{ padding: "20px", backgroundColor: "#f9f9f9", borderRadius: "10px",marginTop:"40px",marginBottom:"40px" }}>
       <h2 style={{padding:"20px"}}>Key <span style={{color: "#bc1823"}}>Stakeholders</span> in the Built Environment Landscape</h2>
       <Swiper
-        navigation={true}
-        modules={[Navigation]}
-        slidesPerView={4} // Adjust for responsiveness
-        style={{
-            paddingLeft: "50px"
-          }}
-      >
-        {cardsData.map((card, index) => (
-          <SwiperSlide key={index} style={{margin:0}}>
-            <div
-              style={{
-                minHeight: "250px",
-                backgroundColor: "#fff",
-                padding: "25px 15px",
-                borderRadius: "8px",
-                boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-                textAlign: "left",
-                marginRight: `45px`
-              }}
-            >
-              <h3 style={{ margin: "10px 0" ,fontSize:"20px" }}>{card.title}</h3>
-              <p style={{ fontSize: "14px", color: "#555" }}>{card.description}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      navigation={true}
+      modules={[Navigation]}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+        1440: {
+          slidesPerView: 4,
+        },
+      }}
+      style={{
+        paddingLeft: '50px',
+      }}
+    >
+      {cardsData.map((card, index) => (
+        <SwiperSlide key={index} style={{ margin: 0 }}>
+          <div
+            style={{
+              minHeight: '250px',
+              backgroundColor: '#fff',
+              padding: '25px 15px',
+              borderRadius: '8px',
+              boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+              textAlign: 'left',
+              marginRight: '45px',
+            }}
+          >
+            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>{card.title}</h3>
+            <p style={{ fontSize: '14px', color: '#555' }}>{card.description}</p>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
       <button
         style={{
           marginTop: "20px",
@@ -87,8 +100,6 @@ const Slider = () => {
       </button>
     </div>
       );
-
-
 }
 
 export default Slider;
